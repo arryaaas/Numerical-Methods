@@ -1,0 +1,23 @@
+{
+    "metode tertutup": {
+        "metode tabel": "metode_tabel(form_data)",
+        "metode biseksi": "metode_biseksi(form_data)",
+        "metode regula falsi": "metode_regula_falsi(form_data)"
+    },
+    "metode terbuka": {
+        "metode newton raphson" : "metode_newton_raphson(form_data)",
+        "metode secant" : "metode_secant(form_data)",
+        "metode iterasi sederhana" : "metode_iterasi_sederhana(form_data)"
+    },
+    "diferensiasi numerik": {
+        "metode selisih mundur" : "metode_selisih_mundur(form_data)",
+        "metode selisih tengah" : "metode_selisih_tengah(form_data)",
+        "metode selisih maju" : "metode_selisih_maju(form_data)"
+    },
+    "integrasi numerik": {
+        "metode riemann" : "metode_riemann(form_data)",
+        "metode trapezoida" : "metode_trapezoida(form_data)",
+        "metode simpson v1" : "metode_simpson_v1(form_data)",
+        "metode simpson v2" : "metode_simpson_v2(form_data)"
+    }
+}

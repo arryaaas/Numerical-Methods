@@ -1,0 +1,84 @@
+{
+    "metode numerik": [
+        "metode numerik",
+        "metode numerik merupakan teknik penyelesaian permasalahan yang diformulasikan secara matematis dengan menggunakan operasi hitungan (aritmatik) yaitu operasi tambah, kurang, kali, dan bagi.",
+        [
+            "metode tertutup",
+            "metode terbuka",
+            "diferensiasi numerik",
+            "integrasi numerik"
+        ]
+    ],
+    "metode tertutup": [
+        "metode tertutup",
+        "disebut sebagai metode tertutup karena dalam pencarian akar-akar persamaan non-linier dilakukan dalam suatu selang.",
+        [
+            "metode tabel",
+            "metode biseksi",
+            "metode regula falsi"
+        ],
+        [
+            "persamaan",
+            "batas_bawah",
+            "batas_atas",
+            "jumlah_pembagi",
+            "toleransi_error"
+        ],
+        "form/form1.html",
+        "result/result1.html"
+    ],
+    "metode terbuka": [
+        "metode terbuka",
+        "metode terbuka merupakan metode yang menggunakan satu atau dua tebakan awal yang tidak memerlukan rentang sejumlah nilai.",
+        [
+            "metode newton raphson",
+            "metode secant",
+            "metode iterasi sederhana"
+        ],
+        [
+            "persamaan",
+            "persamaan_gx",
+            "tebakan_awal",
+            "batas_bawah",
+            "batas_atas",
+            "toleransi_error"
+        ],
+        "form/form2.html",
+        "result/result2.html"
+    ],
+    "diferensiasi numerik": [
+        "diferensiasi numerik",
+        "diferensiasi merupakan proses mencari slope suatu garis pada titik yang diberikan.",
+        [
+            "metode selisih mundur",
+            "metode selisih tengah",
+            "metode selisih maju"
+        ],
+        [
+            "persamaan",
+            "batas_bawah",
+            "batas_atas",
+            "ukuran_langkah"
+        ],
+        "form/form3.html",
+        "result/result3.html"
+    ],
+    "integrasi numerik": [
+        "integrasi numerik",
+        "integrasi numerik digunakan untuk menghitung aproksimasi luas daerah di bawah fungsi yang dimaksud pada selang yang diberikan.",
+        [
+            "metode riemann",
+            "metode trapezoida",
+            "metode simpson 1/3",
+            "metode simpson 3/8"
+        ],
+        [
+            "persamaan",
+            "batas_bawah",
+            "batas_atas",
+            "jumlah_pembagi"
+        ],
+        "form/form4.html",
+        "result/result4.html"
+    ]
+}

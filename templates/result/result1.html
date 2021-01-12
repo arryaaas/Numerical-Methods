@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <br>
+    <h2>{{ member.title() }}</h2>
+    <br>
+    <div>
+
+      <P>Persamaan : {{ content["persamaan"] }}</P>
+
+      <div class="row">
+        <div class="col-md-3">
+          <P>Batas Bawah : {{ content["batas_bawah"] }}</P>
+        </div>
+        <div class="col-md-3">
+          <P>Batas Atas : {{ content["batas_atas"] }}</P>
+        </div>
+      </div>
+
+      {% if member == "metode tabel" %}
+        <div class="row">
+          <div class="col-md-3">
+            <P>Jumlah Pembagi : {{ content["jumlah_pembagi"] }}</P>
+          </div>
+          <div class="col-md-3">
+            <P>Ukuran Langkah : {{ content["ukuran_langkah"] }}</P>
+          </div>
+        </div>
+      {% else %}
+        <P>Toleransi Error : {{ content["toleransi_error"] }}</P>
+      {% endif %}
+      
+      {% if message is defined %}
+        <div class="alert alert-danger" role="alert">
+          <b>Error:</b> {{ message }} <a href="javascript:history.back()" class="alert-link">Silahkan cari selang baru....</a>
+        </div>
+      {% endif %}
+
+      <br>
+    </div>
+
+    {% if tables is defined %}
+      <div class="table-responsive">
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if conclusion is defined %}
+      <div>
+        <p>Kesimpulan :</p>
+        <p>{{ conclusion }}</p>
+        <br>
+      </div>
+    {% endif %}
+
+  </div>
+{% endblock %}

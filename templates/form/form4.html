@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <br>
+    {% if member == "metode simpson v1" %}
+      <h2>Metode Simpson 1/3</h2>
+    {% elif member == "metode simpson v2" %}
+      <h2>Metode Simpson 3/8</h2>
+    {% else %}
+      <h2>{{ member.title() }}</h2>
+    {% endif %}
+    <br>
+    <form action="{{ url_for( 'result', group=group, member=member ) }}" method="POST">
+
+      <div class="form-group">
+        <label for="equation">Persamaan</label>
+        <input type="text" class="form-control" id="equation" placeholder="Persamaan" name="persamaan" required>
+        <small class="form-text text-muted">Contoh : 4x^3 + 7x + 3</small>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="a">Batas Bawah</label>
+          <input type="text" class="form-control" id="a" placeholder="Batas Bawah" name="batas_bawah" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="b">Batas Atas</label>
+          <input type="text" class="form-control" id="b" placeholder="Batas Atas" name="batas_atas" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="n">Jumlah Pembagi</label>
+        <input type="text" class="form-control" id="n" placeholder="Jumlah Pembagi" name="jumlah_pembagi" required>
+      </div>
+
+      <br>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+  </div>
+{% endblock %}

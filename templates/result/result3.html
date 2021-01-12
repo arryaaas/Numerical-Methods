@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <br>
+    <h2>{{ member.title() }}</h2>
+    <br>
+    <div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <P>Persamaan : {{ content["persamaan"] }}</P>
+        </div>
+        <div class="col-md-3">
+          <P>Turunan : {{ content["turunan"] }}</P>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <P>Batas Bawah : {{ content["batas_bawah"] }}</P>
+        </div>
+        <div class="col-md-3">
+          <P>Batas Atas : {{ content["batas_atas"] }}</P>
+        </div>
+      </div>
+
+      <P>Ukuran Langkah : {{ content["ukuran_langkah"] }}</P>
+
+      <br>
+    </div>
+
+    <div class="table-responsive">
+      {% for table in tables %}
+          {{ table|safe }}
+      {% endfor %}
+    </div>
+    
+    <div>
+      <p>Kesimpulan :</p>
+      <p>{{ conclusion }}</p>
+      <br>
+    </div>
+  </div>
+{% endblock %}

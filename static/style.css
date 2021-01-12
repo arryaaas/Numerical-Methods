@@ -1,0 +1,31 @@
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+/* -------------------------------------------- */
+
+table.dataframe, .dataframe th, .dataframe td {
+  border: none;
+  border-bottom: 1px solid #C8C8C8;
+  border-collapse: collapse;
+  text-align:right;
+  padding: 10px;
+  margin-bottom: 40px;
+  font-size: 0.9em;
+}
+
+table.dataframe {
+  width: 100%;
+}
+
+tr:hover { 
+  background-color: #ffff99;
+}
+
+/* -------------------------------------------- */
+
+a.card,
+a.card:hover {
+  text-decoration: none;
+}

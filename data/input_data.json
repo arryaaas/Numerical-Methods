@@ -1,0 +1,29 @@
+{
+    "metode tertutup": {
+        "persamaan": "request.form.get('persamaan')",
+        "batas_bawah": "request.form.get('batas_bawah')",
+        "batas_atas": "request.form.get('batas_atas')",
+        "jumlah_pembagi": "request.form.get('jumlah_pembagi')",
+        "toleransi_error": "request.form.get('toleransi_error')"
+    },
+    "metode terbuka" : {
+        "persamaan" : "request.form.get('persamaan')",
+        "persamaan_gx" : "request.form.get('persamaan_gx')",
+        "tebakan_awal" : "request.form.get('tebakan_awal')",
+        "batas_bawah" : "request.form.get('batas_bawah')",
+        "batas_atas" : "request.form.get('batas_atas')",
+        "toleransi_error" : "request.form.get('toleransi_error')"
+    },
+    "diferensiasi numerik" : {
+        "persamaan" : "request.form.get('persamaan')",
+        "batas_bawah" : "request.form.get('batas_bawah')",
+        "batas_atas" : "request.form.get('batas_atas')",
+        "ukuran_langkah" : "request.form.get('ukuran_langkah')"
+    },
+    "integrasi numerik" : {
+        "persamaan" : "request.form.get('persamaan')",
+        "batas_bawah" : "request.form.get('batas_bawah')",
+        "batas_atas" : "request.form.get('batas_atas')",
+        "jumlah_pembagi" : "request.form.get('jumlah_pembagi')"
+    }
+}

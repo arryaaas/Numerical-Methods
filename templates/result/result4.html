@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <br>
+    {% if member == "metode simpson v1" %}
+      <h2>Metode Simpson 1/3</h2>
+    {% elif member == "metode simpson v2" %}
+      <h2>Metode Simpson 3/8</h2>
+    {% else %}
+      <h2>{{ member.title() }}</h2>
+    {% endif %}
+    <br>
+    <div>
+      <div class="row">
+        <div class="col-md-3">
+          <P>Persamaan : {{ content["persamaan"] }}</P>
+        </div>
+        <div class="col-md-3">
+            <P>Integral : {{ content["integral"] }}</P>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <P>Batas Bawah : {{ content["batas_bawah"] }}</P>
+        </div>
+        <div class="col-md-3">
+          <P>Batas Atas : {{ content["batas_atas"] }}</P>
+        </div>
+      </div>
+
+      <P>Jumlah Pembagi : {{ content["jumlah_pembagi"] }}</P>
+
+      <br>
+    </div>
+
+    <div class="table-responsive">
+      {% for table in tables %}
+          {{ table|safe }}
+      {% endfor %}
+    </div>
+    
+    <div>
+        <p>Kesimpulan :</p>
+        <p>{{ conclusion }}</p>
+        <br>
+    </div>
+  </div>
+{% endblock %}

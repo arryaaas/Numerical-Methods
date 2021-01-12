@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <br>
+    <h2>{{ member.title() }}</h2>
+    <br>
+    <div>
+        
+      <div class="row">
+        <div class="col-md-3">
+          <P>Persamaan : {{ content["persamaan"] }}</P>
+        </div>
+        {% if member == "metode newton raphson" %}
+          <div class="col-md-3">
+            <P>Turunan : {{ content["turunan"] }}</P>
+          </div>
+        {% elif member == "metode iterasi sederhana" %}
+          <P>Persamaan g(x) : {{ content["persamaan_gx"] }}</P>
+        {% endif %}
+      </div>
+
+      {% if member == "metode newton raphson" or member == "metode iterasi sederhana" %}
+        <P>Tebakan Awal : {{ content["tebakan_awal"] }}</P>
+      {% else %}
+        <div class="row">
+          <div class="col-md-3">
+            <P>Batas Bawah : {{ content["batas_bawah"] }}</P>
+          </div>
+          <div class="col-md-3">
+            <P>Batas Atas : {{ content["batas_atas"] }}</P>
+          </div>
+        </div>
+      {% endif %}
+
+      <P>Toleransi Error : {{ content["toleransi_error"] }}</P>
+
+      <br>
+    </div>
+
+    <div class="table-responsive">
+      {% for table in tables %}
+          {{ table|safe }}
+      {% endfor %}
+    </div>
+
+    <div>
+      <p>Kesimpulan :</p>
+      <p>{{ conclusion }}</p>
+      <br>
+    </div>
+
+  </div>
+{% endblock %}
